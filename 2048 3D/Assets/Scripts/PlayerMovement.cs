@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 lastMousePosition;
 
     public Vector3 globalDirection = Vector3.forward;
-    private float pushForce = 15f;
+    private float pushForce = 12f;
     private Rigidbody rb;
 
     public GameObject arrow;
