@@ -11,7 +11,7 @@ public class PlayerSpawner : MonoBehaviour
     public int counter = 0;
     private Vector3 StartCubePosition = new Vector3(0,0.34f,-2.22f);
 
-    public GameObject panelScore, area, panelMenu;
+    public GameObject panelScore, area, panelMenu,BordersMenu, borders;
 
 
     private void Awake()
@@ -26,22 +26,20 @@ public class PlayerSpawner : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    /*void Start()
-    {
-        SpawnPrefab();
-        SpawnStartCube();
-
-    }*/
     void Update()
     {
-      if(Input.GetMouseButtonUp(0))
+        if (area.active)
         {
-            if (counter == 0)
+            if (Input.GetMouseButtonUp(0))
             {
-                Invoke("SpawnPrefab", interval);
-                counter += 1;
+                if (counter == 0)
+                {
+                    Invoke("SpawnPrefab", interval);
+                    counter += 1;
+                }
             }
         }
+      
     }
     public void SpawnPrefab()
     {
@@ -60,11 +58,25 @@ public class PlayerSpawner : MonoBehaviour
     {
         Instantiate(startCube, StartCubePosition ,transform.rotation);
     }
+    public void BtnYes()
+    {
+        panelScore.SetActive(true);
+        area.SetActive(true);
+        BordersMenu.SetActive(false);
+        borders.SetActive(true);
+        SpawnStartCube();
+    }
+    public void BtnNo()
+    {
+        panelScore.SetActive(true);
+        area.SetActive(true);
+        BordersMenu.SetActive(false);
+        SpawnStartCube();
+    }
+
     public void GameStart()
     {
         panelMenu.SetActive(false);
-        panelScore.SetActive(true);
-        area.SetActive(true);
-        SpawnStartCube();
+        BordersMenu.SetActive(true);
     }
 }

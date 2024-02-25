@@ -27,11 +27,23 @@ public class ScoreCounter : MonoBehaviour
         currentScore.text = "0";
         current2048.text = "0";
         c2_str = 2;
+        best2048.text = "32";
+        bestScore.text = "54";
+        b2_str = 32;
+        bS_str = 54;
     }
 
     private void Update()
     {
         currentScore.text = cS_str.ToString();
         current2048.text = c2_str.ToString();
+        if(cS_str >= bS_str)
+        {
+            bestScore.text = cS_str.ToString();
+        }
+        if(c2_str >= b2_str)
+        {
+            best2048.text = c2_str.ToString();
+        }
     }
 }
