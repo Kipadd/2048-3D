@@ -10,8 +10,10 @@ public class PlayerSpawner : MonoBehaviour
     public float interval = 5f;
     public int counter = 0;
     private Vector3 StartCubePosition = new Vector3(0,0.34f,-2.22f);
+    GameObject[] delete;
 
     public GameObject panelScore, area, panelMenu,BordersMenu, borders;
+    public GameObject btnPause, Pausepanel, btncontinue, btnendgame;
 
 
     private void Awake()
@@ -28,7 +30,7 @@ public class PlayerSpawner : MonoBehaviour
     }
     void Update()
     {
-        if (area.active)
+        if (area.active && !Pausepanel.active)
         {
             if (Input.GetMouseButtonUp(0))
             {
@@ -39,6 +41,7 @@ public class PlayerSpawner : MonoBehaviour
                 }
             }
         }
+        delete = GameObject.FindGameObjectsWithTag("Cube");
       
     }
     public void SpawnPrefab()
@@ -58,6 +61,12 @@ public class PlayerSpawner : MonoBehaviour
     {
         Instantiate(startCube, StartCubePosition ,transform.rotation);
     }
+
+    public void Pause()
+    {
+        Pausepanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
     public void BtnYes()
     {
         panelScore.SetActive(true);
@@ -65,6 +74,8 @@ public class PlayerSpawner : MonoBehaviour
         BordersMenu.SetActive(false);
         borders.SetActive(true);
         SpawnStartCube();
+        btnPause.SetActive(true);
+        ScoreRestart(ScoreCounter.instance.cS_str, ScoreCounter.instance.c2_str);
     }
     public void BtnNo()
     {
@@ -72,11 +83,46 @@ public class PlayerSpawner : MonoBehaviour
         area.SetActive(true);
         BordersMenu.SetActive(false);
         SpawnStartCube();
+        btnPause.SetActive(true);
+        ScoreRestart(ScoreCounter.instance.cS_str, ScoreCounter.instance.c2_str);
+    }
+    public void Continue()
+    {
+        Pausepanel.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
+    public void EndGame()
+    {
+        Time.timeScale = 1.0f;
+        Pausepanel.SetActive(false);
+        panelScore.SetActive(false);
+        panelMenu.SetActive(true);
+        area.SetActive(false);
+        for(int i = 0; i < delete.Length; i++)
+        {
+            Destroy(delete[i]);
+        }
+        if (ScoreCounter.instance.cS_str > ScoreCounter.instance.bS_str)
+        {
+            ScoreCounter.instance.bS_str = ScoreCounter.instance.cS_str;
+
+        }
+        if (ScoreCounter.instance.c2_str > ScoreCounter.instance.b2_str)
+        {
+            ScoreCounter.instance.b2_str = ScoreCounter.instance.c2_str;
+
+        }
     }
 
     public void GameStart()
     {
         panelMenu.SetActive(false);
         BordersMenu.SetActive(true);
+    }
+    public void ScoreRestart(int cS, int c2)
+    {
+        ScoreCounter.instance.cS_str = 0;
+        ScoreCounter.instance.c2_str = 0;
+
     }
 }

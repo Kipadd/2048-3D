@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 104505054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 246692747}
+        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
+        m_MethodName: Continue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &104505054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,6 +475,10 @@ MonoBehaviour:
   panelMenu: {fileID: 1555163453}
   BordersMenu: {fileID: 143990670}
   borders: {fileID: 395097809}
+  btnPause: {fileID: 944590719}
+  Pausepanel: {fileID: 1270436883}
+  btncontinue: {fileID: 104505051}
+  btnendgame: {fileID: 749462926}
 --- !u!114 &246692748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,7 +1055,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 749462929}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 246692747}
+        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
+        m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &749462929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,7 +1436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &944590720
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1472,7 +1500,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 944590722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 246692747}
+        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &944590722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1864,7 +1904,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4488a933d29893b4e97ecc15673ea9f6, type: 2}
+  - {fileID: 2100000, guid: e0f0026e346ecba4b8808b49480c6cb3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2044,7 +2084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1177865592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2225,7 +2265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1270436884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2488,7 +2528,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e122d6fe27bfbdc478c2bd2af3f234ce, type: 2}
+  - {fileID: 2100000, guid: 100a2be7bc2d1d94db56658c8df2f02c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3098,7 +3138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1555163454
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3174,7 +3214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1619663183
 Transform:
   m_ObjectHideFlags: 0
