@@ -18,7 +18,6 @@ public class PlayerCollision : MonoBehaviour
     {
         partic.stars = GetComponent<ParticleSystem>();
     }
-    // Start is called before the first frame update
     private void OnCollisionEnter(Collision col)
     {
         PlayerCollision playerCollision = col.gameObject.GetComponent<PlayerCollision>();
@@ -28,11 +27,10 @@ public class PlayerCollision : MonoBehaviour
             currentMaterialIndex++;
             GetComponent<MeshRenderer>().material = materials[currentMaterialIndex];
             Destroy(col.gameObject);
-            ScoreCounter.instance.cS_str += (int)System.Math.Pow(2,currentMaterialIndex)/2;
-            //ScoreCounter.instance.c2_str = (int)System.Math.Pow(2, currentMaterialIndex + 1);
-            if(ScoreCounter.instance.c2_str <= (int)System.Math.Pow(2, currentMaterialIndex + 1))
+            ScoreCounter.instance.cS += (int)System.Math.Pow(2,currentMaterialIndex)/2;
+            if(ScoreCounter.instance.c2 <= (int)System.Math.Pow(2, currentMaterialIndex + 1))
             {
-                ScoreCounter.instance.c2_str = (int)System.Math.Pow(2, currentMaterialIndex + 1);
+                ScoreCounter.instance.c2 = (int)System.Math.Pow(2, currentMaterialIndex + 1);
             }
             
         }

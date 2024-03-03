@@ -18,7 +18,6 @@ public class PlayerSpawner : MonoBehaviour
 
     private void Awake()
     {
-        // ”беждаемс€, что только один экземпл€р объекта Spawner существует
         if (instance == null)
         {
             instance = this;
@@ -75,7 +74,7 @@ public class PlayerSpawner : MonoBehaviour
         borders.SetActive(true);
         SpawnStartCube();
         btnPause.SetActive(true);
-        ScoreRestart(ScoreCounter.instance.cS_str, ScoreCounter.instance.c2_str);
+        ScoreRestart(ScoreCounter.instance.cS, ScoreCounter.instance.c2);
     }
     public void BtnNo()
     {
@@ -84,7 +83,7 @@ public class PlayerSpawner : MonoBehaviour
         BordersMenu.SetActive(false);
         SpawnStartCube();
         btnPause.SetActive(true);
-        ScoreRestart(ScoreCounter.instance.cS_str, ScoreCounter.instance.c2_str);
+        ScoreRestart(ScoreCounter.instance.cS, ScoreCounter.instance.c2);
     }
     public void Continue()
     {
@@ -102,14 +101,14 @@ public class PlayerSpawner : MonoBehaviour
         {
             Destroy(delete[i]);
         }
-        if (ScoreCounter.instance.cS_str > ScoreCounter.instance.bS_str)
+        if (ScoreCounter.instance.cS > ScoreCounter.instance.bS)
         {
-            ScoreCounter.instance.bS_str = ScoreCounter.instance.cS_str;
+            ScoreCounter.instance.bS = ScoreCounter.instance.cS;
 
         }
-        if (ScoreCounter.instance.c2_str > ScoreCounter.instance.b2_str)
+        if (ScoreCounter.instance.c2 > ScoreCounter.instance.b2)
         {
-            ScoreCounter.instance.b2_str = ScoreCounter.instance.c2_str;
+            ScoreCounter.instance.b2 = ScoreCounter.instance.c2;
 
         }
     }
@@ -121,8 +120,8 @@ public class PlayerSpawner : MonoBehaviour
     }
     public void ScoreRestart(int cS, int c2)
     {
-        ScoreCounter.instance.cS_str = 0;
-        ScoreCounter.instance.c2_str = 0;
+        ScoreCounter.instance.cS = 0;
+        ScoreCounter.instance.c2 = 0;
 
     }
 }

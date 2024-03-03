@@ -8,11 +8,10 @@ public class ScoreCounter : MonoBehaviour
     public Text currentScore, bestScore, current2048, best2048;
 
     public static ScoreCounter instance = null;
-    public int cS_str, bS_str, c2_str, b2_str;
+    public int cS, bS, c2, b2;
 
     private void Awake()
     {
-        // ”беждаемс€, что только один экземпл€р объекта Spawner существует
         if (instance == null)
         {
             instance = this;
@@ -26,24 +25,24 @@ public class ScoreCounter : MonoBehaviour
     {
         currentScore.text = "0";
         current2048.text = "0";
-        c2_str = 2;
+        c2 = 2;
         best2048.text = "32";
         bestScore.text = "54";
-        b2_str = 32;
-        bS_str = 54;
+        b2 = 32;
+        bS = 54;
     }
 
     private void Update()
     {
-        currentScore.text = cS_str.ToString();
-        current2048.text = c2_str.ToString();
-        if(cS_str >= bS_str)
+        currentScore.text = cS.ToString();
+        current2048.text = c2.ToString();
+        if(cS >= bS)
         {
-            bestScore.text = cS_str.ToString();
+            bestScore.text = cS.ToString();
         }
-        if(c2_str >= b2_str)
+        if(c2 >= b2)
         {
-            best2048.text = c2_str.ToString();
+            best2048.text = c2.ToString();
         }
     }
 }

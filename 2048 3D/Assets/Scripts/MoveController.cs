@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+
+public class MoveController : MonoBehaviour
 {
-    private float speed = 0.12f; 
+    private float speed = 0.12f;
     private float minX = -1.04f; 
     private float maxX = 1.04f;
 
@@ -31,18 +32,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            Debug.Log("zapusk");
             isDragging = false;
-            //Vector3 localDirection = transform.InverseTransformDirection(globalDirection.normalized);
 
             rb.AddForce(transform.forward * -1 * pushForce, ForceMode.Impulse);
-            //Debug.Log(localDirection);
 
             enabled = false;
             Object.Destroy(arrow);
             
         }
-
         if (isDragging)
         {
             float deltaX = (Input.mousePosition.x - lastMousePosition.x) * Time.deltaTime * speed;
@@ -60,3 +57,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
+
+
