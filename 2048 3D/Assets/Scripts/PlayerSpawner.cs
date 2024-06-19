@@ -74,7 +74,7 @@ public class PlayerSpawner : MonoBehaviour
         borders.SetActive(true);
         SpawnStartCube();
         btnPause.SetActive(true);
-        ScoreRestart(ScoreCounter.instance.cS, ScoreCounter.instance.c2);
+        ScoreRestart(ScoreCounter.instance.currentScoreNumber, ScoreCounter.instance.current2048Number);
     }
     public void BtnNo()
     {
@@ -83,7 +83,7 @@ public class PlayerSpawner : MonoBehaviour
         BordersMenu.SetActive(false);
         SpawnStartCube();
         btnPause.SetActive(true);
-        ScoreRestart(ScoreCounter.instance.cS, ScoreCounter.instance.c2);
+        ScoreRestart(ScoreCounter.instance.currentScoreNumber, ScoreCounter.instance.current2048Number);
     }
     public void Continue()
     {
@@ -101,14 +101,14 @@ public class PlayerSpawner : MonoBehaviour
         {
             Destroy(delete[i]);
         }
-        if (ScoreCounter.instance.cS > ScoreCounter.instance.bS)
+        if (ScoreCounter.instance.currentScoreNumber > ScoreCounter.instance.bestScoreNumber)
         {
-            ScoreCounter.instance.bS = ScoreCounter.instance.cS;
+            ScoreCounter.instance.bestScoreNumber = ScoreCounter.instance.currentScoreNumber;
 
         }
-        if (ScoreCounter.instance.c2 > ScoreCounter.instance.b2)
+        if (ScoreCounter.instance.current2048Number > ScoreCounter.instance.best2048Number)
         {
-            ScoreCounter.instance.b2 = ScoreCounter.instance.c2;
+            ScoreCounter.instance.best2048Number = ScoreCounter.instance.current2048Number;
 
         }
     }
@@ -120,8 +120,8 @@ public class PlayerSpawner : MonoBehaviour
     }
     public void ScoreRestart(int cS, int c2)
     {
-        ScoreCounter.instance.cS = 0;
-        ScoreCounter.instance.c2 = 0;
+        ScoreCounter.instance.currentScoreNumber = 0;
+        ScoreCounter.instance.current2048Number = 0;
 
     }
 }

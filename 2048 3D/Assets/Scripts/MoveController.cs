@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    private float speed = 0.12f;
+    private float speed = 1.0f;
     private float minX = -1.04f; 
     private float maxX = 1.04f;
 
@@ -57,5 +57,3 @@ public class MoveController : MonoBehaviour
         }
     }
 }
-
-

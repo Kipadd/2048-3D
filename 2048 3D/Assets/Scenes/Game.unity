@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2090975476}
-  m_IndirectSpecularColor: {r: 0.17277299, g: 0.21589755, b: 0.29783133, a: 1}
+  m_IndirectSpecularColor: {r: 0.17277312, g: 0.21589811, b: 0.29783204, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -491,14 +491,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13cee0f3ab67d34596dc4a06013fa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScore: {fileID: 1387291217}
-  bestScore: {fileID: 2044834952}
-  current2048: {fileID: 682170137}
-  best2048: {fileID: 844513882}
-  cS_str: 0
-  bS_str: 0
-  c2_str: 0
-  b2_str: 0
+  currentScoreText: {fileID: 0}
+  bestScoreText: {fileID: 0}
+  current2048Text: {fileID: 0}
+  best2048Text: {fileID: 0}
+  currentScoreNumber: 0
+  bestScoreNumber: 0
+  current2048Number: 0
+  best2048Number: 0
 --- !u!1 &395097809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +1808,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -3488,7 +3489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e03271e4b18f81943995ec08d99491f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ade3dc252c410744cabbe8adf6e20fdc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
