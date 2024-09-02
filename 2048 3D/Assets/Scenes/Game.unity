@@ -464,21 +464,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1171d34b12de1c9498602df90d0a82bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn:
+  prefabsToSpawn:
   - {fileID: 701210364623043041, guid: 70a540624764df841a961c24daccb545, type: 3}
   - {fileID: 701210364623043041, guid: 27eaf52310992124684e60ebfac3d46f, type: 3}
-  startCube: {fileID: 2049186175290059438, guid: 2ef54a21135ba164c83c5ee6d40bd19f, type: 3}
-  interval: 1
-  counter: 0
-  panelScore: {fileID: 1177865591}
-  area: {fileID: 1619663182}
-  panelMenu: {fileID: 1555163453}
-  BordersMenu: {fileID: 143990670}
-  borders: {fileID: 395097809}
-  btnPause: {fileID: 944590719}
-  Pausepanel: {fileID: 1270436883}
-  btncontinue: {fileID: 104505051}
-  btnendgame: {fileID: 749462926}
+  startCubePrefab: {fileID: 2049186175290059438, guid: 2ef54a21135ba164c83c5ee6d40bd19f, type: 3}
+  playerSpawnPosition: {x: 0, y: 0.5, z: -2.5}
+  spawnInterval: 5
+  uiController: {fileID: 1154548594}
 --- !u!114 &246692748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,10 +483,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13cee0f3ab67d34596dc4a06013fa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScoreText: {fileID: 0}
-  bestScoreText: {fileID: 0}
-  current2048Text: {fileID: 0}
-  best2048Text: {fileID: 0}
+  currentScoreText: {fileID: 1387291217}
+  bestScoreText: {fileID: 2044834952}
+  current2048Text: {fileID: 682170137}
+  best2048Text: {fileID: 844513882}
   currentScoreNumber: 0
   bestScoreNumber: 0
   current2048Number: 0
@@ -2068,6 +2060,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139672747}
   m_CullTransparentMesh: 1
+--- !u!1 &1154548593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154548595}
+  - component: {fileID: 1154548594}
+  m_Layer: 0
+  m_Name: UIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1154548594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154548593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb803876b2181324cb394b062763992b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelScore: {fileID: 1177865591}
+  gameArea: {fileID: 1619663182}
+  pausePanel: {fileID: 1270436883}
+  panelMenu: {fileID: 1555163453}
+  bordersMenu: {fileID: 143990670}
+  gameBorders: {fileID: 395097809}
+  pauseButton: {fileID: 944590721}
+  continueButton: {fileID: 104505053}
+  endGameButton: {fileID: 749462928}
+  startGameButton: {fileID: 1139672749}
+  yesButton: {fileID: 1428655958}
+  noButton: {fileID: 1324848605}
+--- !u!4 &1154548595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154548593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 421.40546, y: 1465.9377, z: 23.283447}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177865591
 GameObject:
   m_ObjectHideFlags: 0

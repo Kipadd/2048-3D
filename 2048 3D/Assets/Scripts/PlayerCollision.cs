@@ -3,50 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Partic
+public class ParticleEffect
 {
     public ParticleSystem stars;
 }
 
 public class PlayerCollision : MonoBehaviour
 {
-    public Partic partic;
-    public MeshRenderer _meshRenderer;
+    private ParticleSystem _particleSystem;
+    private MeshRenderer _meshRenderer;
     public Material[] materials;
     public int currentMaterialIndex = 0;
 
     private void Start()
     {
-        partic.stars = GetComponent<ParticleSystem>();
+        _particleSystem = GetComponent<ParticleSystem>();
         _meshRenderer = GetComponent<MeshRenderer>();
     }
 
     private void OnCollisionEnter(Collision col)
     {
-        PlayerCollision playerCollision = col.gameObject.GetComponent<PlayerCollision>();
-        if (playerCollision != null && playerCollision.currentMaterialIndex == currentMaterialIndex)
+        PlayerCollision otherPlayer = col.gameObject.GetComponent<PlayerCollision>();
+        if (otherPlayer != null && otherPlayer.currentMaterialIndex == currentMaterialIndex)
         {
-            partic.stars.Play();
+            _particleSystem.Play();
             currentMaterialIndex++;
 
-            // ѕерев≥рка, чи currentMaterialIndex в межах масиву materials
+            // ѕерев≥рка, чи ≥ндекс не виходить за меж≥ масиву
             if (currentMaterialIndex < materials.Length)
             {
                 _meshRenderer.material = materials[currentMaterialIndex];
             }
             else
             {
-                // якщо ≥ндекс виходить за меж≥ масиву, можна зробити щось ≥нше (наприклад, встановити останн≥й матер≥ал)
-                _meshRenderer.material = materials[materials.Length - 1];
-                // јбо залишити поточний матер≥ал без зм≥н
+                _meshRenderer.material = materials[materials.Length - 1]; // якщо ≥ндекс за межами, залишаЇмо останн≥й матер≥ал
             }
 
             Destroy(col.gameObject);
-            ScoreCounter.instance.currentScoreNumber += (int)System.Math.Pow(2, currentMaterialIndex) / 2;
-            if (ScoreCounter.instance.current2048Number <= (int)System.Math.Pow(2, currentMaterialIndex + 1))
-            {
-                ScoreCounter.instance.current2048Number = (int)System.Math.Pow(2, currentMaterialIndex + 1);
-            }
+
+            // ќновленн€ значень рахунку
+            ScoreCounter.Instance.UpdateScore(currentMaterialIndex);
         }
     }
 }
