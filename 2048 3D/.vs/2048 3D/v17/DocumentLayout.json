@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "D:\\UnityGitHub\\2048_3D\\2048 3D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|d:\\unitygithub\\2048_3d\\2048 3d\\assets\\scripts\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|D:\\UnityGitHub\\2048_3D\\2048 3D\\assets\\scripts\\scorecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scorecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|d:\\unitygithub\\2048_3d\\2048 3d\\assets\\scripts\\gameconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|D:\\UnityGitHub\\2048_3D\\2048 3D\\assets\\scripts\\playerspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|d:\\unitygithub\\2048_3d\\2048 3d\\assets\\scripts\\monosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\monosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|D:\\UnityGitHub\\2048_3D\\2048 3D\\assets\\scripts\\playercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|d:\\unitygithub\\2048_3d\\2048 3d\\assets\\scripts\\playercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|D:\\UnityGitHub\\2048_3D\\2048 3D\\assets\\scripts\\movecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|D:\\UnityGitHub\\2048_3D\\2048 3D\\assets\\scripts\\scorecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scorecounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|D:\\UnityGitHub\\2048_3D\\2048 3D\\assets\\scripts\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|D:\\UnityGitHub\\2048_3D\\2048 3D\\assets\\scripts\\monosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAB89588-D186-6B10-CCC3-FB410624D2EE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\monosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +38,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "GameConstants.cs",
+              "DocumentMoniker": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\GameConstants.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameConstants.cs",
+              "ToolTip": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\GameConstants.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameConstants.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T13:23:04.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MonoSingleton.cs",
               "DocumentMoniker": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\MonoSingleton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MonoSingleton.cs",
@@ -51,65 +68,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UIController.cs",
               "DocumentMoniker": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\UIController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIController.cs",
               "ToolTip": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\UIController.cs",
               "RelativeToolTip": "Assets\\Scripts\\UIController.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAjwG4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T18:57:42.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ScoreCounter.cs",
               "DocumentMoniker": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\ScoreCounter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreCounter.cs",
               "ToolTip": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\ScoreCounter.cs",
               "RelativeToolTip": "Assets\\Scripts\\ScoreCounter.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAswCsAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T12:46:54.983Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "MoveController.cs",
               "DocumentMoniker": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\MoveController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MoveController.cs",
               "ToolTip": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\MoveController.cs",
               "RelativeToolTip": "Assets\\Scripts\\MoveController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T12:06:54.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "PlayerCollision.cs",
               "DocumentMoniker": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\PlayerCollision.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerCollision.cs",
               "ToolTip": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\PlayerCollision.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerCollision.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAADwvzAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T12:24:51.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PlayerSpawner.cs",
               "DocumentMoniker": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\PlayerSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerSpawner.cs",
               "ToolTip": "D:\\UnityGitHub\\2048_3D\\2048 3D\\Assets\\Scripts\\PlayerSpawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerSpawner.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAowEMAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T12:46:53.503Z",
               "EditorCaption": ""

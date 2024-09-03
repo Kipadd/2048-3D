@@ -131,8 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa62ce994b6bf094f9c0b2aa5b4805ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  globalDirection: {x: 0, y: 0, z: 1}
+  gameConstants: {fileID: 11400000, guid: 0836eee83d2774a40ab135be8c3a4a79, type: 2}
   arrow: {fileID: 701210365369684120}
+  isDragging: 0
 --- !u!114 &408323365814351455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a8b3ba5da33aa439fc09b6fcbd5d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partic:
-    stars: {fileID: 0}
   materials:
   - {fileID: 2100000, guid: 82bf7c7a7e3fd9e448dc505ac0069f67, type: 2}
   - {fileID: 2100000, guid: 2c3406a7bc9eb30478f4e1a648d2b877, type: 2}

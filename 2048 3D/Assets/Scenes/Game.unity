@@ -205,19 +205,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 104505054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 246692747}
-        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
-        m_MethodName: Continue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &104505054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,13 +452,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1171d34b12de1c9498602df90d0a82bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameConstants: {fileID: 11400000, guid: 0836eee83d2774a40ab135be8c3a4a79, type: 2}
   prefabsToSpawn:
   - {fileID: 701210364623043041, guid: 70a540624764df841a961c24daccb545, type: 3}
   - {fileID: 701210364623043041, guid: 27eaf52310992124684e60ebfac3d46f, type: 3}
   startCubePrefab: {fileID: 2049186175290059438, guid: 2ef54a21135ba164c83c5ee6d40bd19f, type: 3}
-  playerSpawnPosition: {x: 0, y: 0.5, z: -2.5}
-  spawnInterval: 5
   uiController: {fileID: 1154548594}
+  spawnCounter: 0
 --- !u!114 &246692748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,19 +1035,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 749462929}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 246692747}
-        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
-        m_MethodName: EndGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &749462929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,19 +1468,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 944590722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 246692747}
-        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &944590722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2009,19 +1973,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1139672750}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 246692747}
-        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
-        m_MethodName: GameStart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1139672750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2458,19 +2410,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1324848606}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 246692747}
-        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
-        m_MethodName: BtnNo
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1324848606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2849,19 +2789,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1428655959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 246692747}
-        m_TargetAssemblyTypeName: PlayerSpawner, Assembly-CSharp
-        m_MethodName: BtnYes
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1428655959
 MonoBehaviour:
   m_ObjectHideFlags: 0

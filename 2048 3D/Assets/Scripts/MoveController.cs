@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    private const float MoveSpeed = 1.0f;
-    private const float MinXPosition = -1.04f;
-    private const float MaxXPosition = 1.04f;
-    private const float PushForce = 12f;
+    [SerializeField] private GameConstants gameConstants;
 
-    private bool isDragging = false;
     private Vector3 lastMousePosition;
     private Rigidbody _rb;
-
     public GameObject arrow;
 
-    private void Start()
+    public bool isDragging = false;
+
+
+    public void Start()
     {
         _rb = GetComponent<Rigidbody>();
-    }
+}
 
     void Update()
     {
@@ -27,7 +25,7 @@ public class MoveController : MonoBehaviour
         CheckForArrowDestruction();
     }
 
-    private void HandleMouseInput()
+    public void HandleMouseInput()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -37,7 +35,7 @@ public class MoveController : MonoBehaviour
         else if (Input.GetMouseButtonUp(0))
         {
             isDragging = false;
-            _rb.AddForce(transform.forward * -1 * PushForce, ForceMode.Impulse);
+            _rb.AddForce(transform.forward * -1 * gameConstants.PushForce, ForceMode.Impulse);
 
             enabled = false;
             Destroy(arrow);
@@ -45,7 +43,7 @@ public class MoveController : MonoBehaviour
 
         if (isDragging)
         {
-            float deltaX = (Input.mousePosition.x - lastMousePosition.x) * Time.deltaTime * MoveSpeed;
+            float deltaX = (Input.mousePosition.x - lastMousePosition.x) * Time.deltaTime * gameConstants.MoveSpeed;
             lastMousePosition = Input.mousePosition;
             transform.position += new Vector3(deltaX, 0f, 0f);
         }
@@ -53,7 +51,7 @@ public class MoveController : MonoBehaviour
 
     private void ClampPlayerPosition()
     {
-        float clampedX = Mathf.Clamp(transform.position.x, MinXPosition, MaxXPosition);
+        float clampedX = Mathf.Clamp(transform.position.x, gameConstants.MinXPosition, gameConstants.MaxXPosition);
         transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
     }
 

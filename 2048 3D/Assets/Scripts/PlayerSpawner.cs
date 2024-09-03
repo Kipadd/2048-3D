@@ -5,16 +5,16 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 
 public class PlayerSpawner : MonoSingleton<PlayerSpawner>
 {
+    [SerializeField] private GameConstants gameConstants;
+
     public GameObject[] prefabsToSpawn;
     public GameObject startCubePrefab;
-    public Vector3 playerSpawnPosition = new Vector3(0, 0.5f, -2.5f);
-    public float spawnInterval = 5f;
 
-    private int spawnCounter = 0;
-    private readonly Vector3 startCubePosition = new Vector3(0, 0.34f, -2.22f);
     public UIController uiController;
 
-    private GameObject[] delete;
+    public int spawnCounter = 0;
+
+    private List<GameObject> spawnedCubes = new List<GameObject>();
 
     void Update()
     {
@@ -24,46 +24,42 @@ public class PlayerSpawner : MonoSingleton<PlayerSpawner>
             {
                 if (spawnCounter == 0)
                 {
-                    Invoke("SpawnPrefab", spawnInterval);
+                    Invoke("SpawnPlayerCube", gameConstants.spawnInterval);
                     spawnCounter += 1;
                 }
             }
         }
-        delete = GameObject.FindGameObjectsWithTag("Cube");
 
     }
-    public void SpawnPrefab()
+    public void SpawnPlayerCube()
     {
         float randomValue = Random.value;
         if (randomValue <= 0.75f)
         {
-            Instantiate(prefabsToSpawn[0], transform.position, transform.rotation);
+            GameObject newCube = Instantiate(prefabsToSpawn[0], transform.position, transform.rotation);
+            spawnedCubes.Add(newCube);
         }
         else
         {
-            Instantiate(prefabsToSpawn[1], transform.position, transform.rotation);
+            GameObject newCube = Instantiate(prefabsToSpawn[1], transform.position, transform.rotation);
+            spawnedCubes.Add(newCube);
         }
         spawnCounter = 0;
     }
     public void SpawnStartCube()
     {
-        Instantiate(startCubePrefab, startCubePosition, transform.rotation);
+        GameObject newCube = Instantiate(startCubePrefab, gameConstants.startCubePosition, transform.rotation);
+        spawnedCubes.Add(newCube);
     }
 
 
     public void ResetGame()
     {
-        GameObject[] cubes = GameObject.FindGameObjectsWithTag("Cube");
-        foreach (var cube in cubes)
+        foreach (var cube in spawnedCubes)
         {
             Destroy(cube);
         }
-
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        foreach (var player in players)
-        {
-            Destroy(player);
-        }
+        spawnedCubes.Clear();
 
         ScoreCounter.Instance.ResetScores();
         UIController.Instance.ShowScorePanel();

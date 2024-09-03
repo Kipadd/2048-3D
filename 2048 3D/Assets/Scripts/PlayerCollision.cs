@@ -29,19 +29,17 @@ public class PlayerCollision : MonoBehaviour
             _particleSystem.Play();
             currentMaterialIndex++;
 
-            // ѕерев≥рка, чи ≥ндекс не виходить за меж≥ масиву
             if (currentMaterialIndex < materials.Length)
             {
                 _meshRenderer.material = materials[currentMaterialIndex];
             }
             else
             {
-                _meshRenderer.material = materials[materials.Length - 1]; // якщо ≥ндекс за межами, залишаЇмо останн≥й матер≥ал
+                _meshRenderer.material = materials[materials.Length - 1]; 
             }
 
             Destroy(col.gameObject);
 
-            // ќновленн€ значень рахунку
             ScoreCounter.Instance.UpdateScore(currentMaterialIndex);
         }
     }

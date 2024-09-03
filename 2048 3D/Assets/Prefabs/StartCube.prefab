@@ -113,8 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a8b3ba5da33aa439fc09b6fcbd5d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partic:
-    stars: {fileID: 0}
+  gameConstants: {fileID: 11400000, guid: 0836eee83d2774a40ab135be8c3a4a79, type: 2}
   materials:
   - {fileID: 2100000, guid: 82bf7c7a7e3fd9e448dc505ac0069f67, type: 2}
   - {fileID: 2100000, guid: 2c3406a7bc9eb30478f4e1a648d2b877, type: 2}
@@ -127,7 +126,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 9b8296272fe0a8649ab3aded9a90efe3, type: 2}
   - {fileID: 2100000, guid: af1589c1412c5bc4fb162c8ffe171b2c, type: 2}
   - {fileID: 2100000, guid: 83ff1f8e3beb065489721ab3572b41b6, type: 2}
-  currentMaterialIndex: 0
 --- !u!54 &2049186175290059409
 Rigidbody:
   m_ObjectHideFlags: 0
